@@ -53,8 +53,8 @@ jobs:
         [ -e $GITHUB_WORKSPACE/LICENSE ] && cp $GITHUB_WORKSPACE/LICENSE $GITHUB_WORKSPACE/${{matrix.target}}
         [ -e $GITHUB_WORKSPACE/README.md ] && cp $GITHUB_WORKSPACE/README.md $GITHUB_WORKSPACE/${{matrix.target}}
         cd $GITHUB_WORKSPACE/${{matrix.target}}
-        git config user.name "liuran001"
-        git config user.email "liuran001@126.com"
+        git config user.name "roseskygit2"
+        git config user.email "roseskygit2@163.com"
         git add .
         git commit -m "update$(TZ='Asia/Shanghai' date +@%Y%m%d)"
         git push --quiet "https://$GITHUB_TOKEN@github.com/roseskygit2/openwrt-packages.git" HEAD:${{matrix.target}}
