@@ -42,7 +42,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE
         chmod +x ${{matrix.target}}.sh
-        git clone -b ${{matrix.target}} https://github.com/liuran001/openwrt-packages.git ${{matrix.target}}
+        git clone -b ${{matrix.target}} https://github.com/roseskygit2/openwrt-packages.git ${{matrix.target}}
         cd ${{matrix.target}}
         $GITHUB_WORKSPACE/${{matrix.target}}.sh
 
@@ -57,7 +57,7 @@ jobs:
         git config user.email "liuran001@126.com"
         git add .
         git commit -m "update$(TZ='Asia/Shanghai' date +@%Y%m%d)"
-        git push --quiet "https://$GITHUB_TOKEN@github.com/liuran001/openwrt-packages.git" HEAD:${{matrix.target}}
+        git push --quiet "https://$GITHUB_TOKEN@github.com/roseskygit2/openwrt-packages.git" HEAD:${{matrix.target}}
  
 
  
